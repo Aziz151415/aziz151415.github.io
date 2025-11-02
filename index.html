@@ -1,14 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aziz Developer Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Power — Brain Training Puzzle Game</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Memory Power is a relaxing brain-training puzzle game with clean design, daily levels, and smooth performance.">
+  <meta property="og:title" content="Memory Power — Brain Training Puzzle Game">
+  <meta property="og:description" content="Sharpen your memory with beautiful, calm gameplay and daily challenges.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aziz151415.github.io/">
+  <meta property="og:image" content="https://aziz151415.github.io/icon-1200.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root{
+      --bg: #0e1f1b;
+      --card:#0f2f25;
+      --brand:#15b59e;
+      --brand2:#1dd3b0;
+      --text:#e7f6f2;
+      --muted:#a9c7bf;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:
+      radial-gradient(1200px 600px at 20% -10%, #14463c 0%, #0e1f1b 40%, #0a1613 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+    }
+    a{color:var(--brand2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;gap:16px;justify-content:space-between;align-items:center}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:44px;height:44px;border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      display:grid;place-items:center;font-weight:800;color:#06352d;
+      box-shadow:0 10px 30px rgba(21,181,158,.35);
+    }
+    .lang{display:flex;gap:8px}
+    .lang button{
+      background:transparent;border:1px solid #2d4d46;color:var(--text);
+      padding:8px 12px;border-radius:10px;cursor:pointer
+    }
+    .lang button.active{border-color:var(--brand);color:var(--brand)}
+
+    .hero{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;
+      padding:40px 0 10px
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(26,55,48,.6), rgba(20,36,32,.35));
+      border:1px solid #21443c;border-radius:18px;padding:22px;
+      box-shadow:0 20px 60px rgba(0,0,0,.25)
+    }
+    h1{font-size:40px;line-height:1.1;margin:0 0 12px}
+    .subtitle{color:var(--muted);font-size:18px}
+    .badges{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+    .badge{
+      display:inline-flex;align-items:center;gap:10px;
+      background:#0d1d19;border:1px solid #244d44;color:#e8fff9;
+      padding:10px 14px;border-radius:12px;font-weight:600
+    }
+    .tiny{font-size:13px;color:var(--muted);margin-top:8px}
+
+    .phone{
+      height:430px;border-radius:26px;border:1px solid #244d44;overflow:hidden;
+      background:
+        radial-gradient(120px 120px at 30% 20%, rgba(29,211,176,.35), transparent 60%),
+        radial-gradient(180px 120px at 90% 0%, rgba(21,181,158,.25), transparent 60%),
+        #0c1b17;
+      display:grid;place-items:center;color:#bdebe1
+    }
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+    .feat{padding:18px;border-radius:16px;border:1px solid #23473f;background:#0d1d19}
+    .feat h3{margin:0 0 6px;font-size:18px}
+    .feat p{margin:0;color:var(--muted);font-size:15px}
+
+    .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+    .shot{
+      height:160px;border-radius:14px;border:1px solid #244d44;background:#10201b;
+      display:grid;place-items:center;color:#80cfc1
+    }
+
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+    footer{margin:40px 0 20px;text-align:center;color:#9fbdb6;font-size:14px}
+    .links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+    .links a{border:1px solid #2a4f47;border-radius:10px;padding:8px 12px;background:#0d1d19}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+      .shots{grid-template-columns:1fr 1fr}
+    }
+    /* RTL support toggle */
+    [dir="rtl"] .hero{direction:rtl}
+    [dir="rtl"] .features,[dir="rtl"] .row,[dir="rtl"] .shots{direction:rtl}
+  </style>
 </head>
 <body>
-  <h2>Welcome to Aziz’s Developer Website</h2>
-  <p>This page hosts developer files for apps by Abdulaziz Alharbi (Memory Power, Daily Ball Match, etc.).</p>
-  <p>Privacy Policy: <a href="https://aziz151415.github.io/Memory-Power-privacy/">View Memory Power Privacy Policy</a></p>
-  <p>App Ads File: <a href="https://aziz151415.github.io/app-ads.txt">View app-ads.txt</a></p>
+  <div class="wrap" id="root" data-lang="en" dir="ltr">
+    <header>
+      <div class="brand">
+        <div class="logo">MP</div>
+        <strong>Memory Power</strong>
+      </div>
+      <div class="lang">
+        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+        <button id="btn-ar" onclick="setLang('ar')">العربية</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card">
+        <h1 data-en="Train Your Brain, Daily."
+            data-ar="درّب ذاكرتك… كل يوم.">Train Your Brain, Daily.</h1>
+        <p class="subtitle"
+           data-en="A calm, elegant memory game with daily levels and smooth performance."
+           data-ar="لعبة ذاكرة هادئة بأناقة عالية، مستويات يومية، وأداء سلس.">
+          A calm, elegant memory game with daily levels and smooth performance.
+        </p>
+        <div class="badges">
+          <a class="badge" href="APP_STORE_LINK_HERE" target="_blank" rel="noopener">
+             Download on the App Store
+          </a>
+          <a class="badge" href="https://aziz151415.github.io/app-ads.txt" target="_blank" rel="noopener">
+            app-ads.txt
+          </a>
+          <a class="badge" href="https://aziz151415.github.io/Memory-Power-privacy/" target="_blank" rel="noopener">
+            Privacy Policy
+          </a>
+          <a class="badge" href="mailto:Abdulaziz.h1407@gmail.com">Support</a>
+        </div>
+        <div class="tiny"
+             data-en="No account required • Works offline • Small size"
+             data-ar="لا حاجة لحساب • يعمل دون اتصال • حجم خفيف">
+          No account required • Works offline • Small size
+        </div>
+      </div>
+
+      <div class="phone card">
+        <div>
+          <div style="font-size:48px;opacity:.9;">🧠</div>
+          <div style="margin-top:8px;color:#b9f3e8">Memory Power</div>
+          <div style="font-size:13px;color:#79cdbf;margin-top:6px"
+               data-en="Preview mockup"
+               data-ar="صورة تمثيلية">Preview mockup</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="feat">
+        <h3 data-en="Elegant & Fast" data-ar="أنيق وسريع">Elegant & Fast</h3>
+        <p  data-en="Optimized for smooth gameplay on a wide range of iPhones."
+            data-ar="مُحسّن لسلاسة اللعب على معظم أجهزة iPhone.">
+          Optimized for smooth gameplay on a wide range of iPhones.
+        </p>
+      </div>
+      <div class="feat">
+        <h3 data-en="Daily Levels" data-ar="مستويات يومية">Daily Levels</h3>
+        <p  data-en="Fresh challenges to keep your brain active every day."
+            data-ar="تحديات متجددة تُنشّط الذاكرة يوميًا.">
+          Fresh challenges to keep your brain active every day.
+        </p>
+      </div>
+      <div class="feat">
+        <h3 data-en="Privacy First" data-ar="الخصوصية أولًا">Privacy First</h3>
+        <p  data-en="No personal data collection. GDPR consent respected."
+            data-ar="لا نجمع بيانات شخصية. نلتزم بموافقة GDPR.">
+          No personal data collection. GDPR consent respected.
+        </p>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="row">
+      <div class="card">
+        <h3 style="margin:0 0 10px"
+            data-en="In-Game Screenshots"
+            data-ar="صور من داخل اللعبة">In-Game Screenshots</h3>
+        <div class="shots">
+          <div class="shot">Shot 1</div>
+          <div class="shot">Shot 2</div>
+          <div class="shot">Shot 3</div>
+        </div>
+        <div class="tiny" style="margin-top:10px"
+             data-en="Screenshots are illustrative"
+             data-ar="الصور توضيحية">Screenshots are illustrative</div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 10px"
+            data-en="Made for Focus"
+            data-ar="مصممة للتركيز">Made for Focus</h3>
+        <p class="subtitle" style="margin:6px 0 0"
+           data-en="Minimal visuals, gentle feedback, and short sessions that fit your day."
+           data-ar="تصميم بسيط، مؤثرات لطيفة، وجلسات قصيرة تناسب يومك.">
+          Minimal visuals, gentle feedback, and short sessions that fit your day.
+        </p>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section style="margin-top:26px">
+      <div class="links">
+        <a href="https://aziz151415.github.io/Memory-Power-privacy/" target="_blank" rel="noopener"
+           data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+        <a href="mailto:Abdulaziz.h1407@gmail.com"
+           data-en="Contact Support" data-ar="الدعم الفني">Contact Support</a>
+        <a href="https://aziz151415.github.io/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Memory Power. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- Simple language toggle -->
+  <script>
+    function setLang(lang){
+      const root = document.getElementById('root');
+      root.dataset.lang = lang;
+      root.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      document.querySelectorAll('[data-en]').forEach(el=>{
+        el.textContent = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // initialize EN default
+    setLang('en');
+  </script>
+
+  <!-- Optional structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Memory Power",
+    "operatingSystem": "iOS",
+    "applicationCategory": "GameApplication",
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "url": "https://aziz151415.github.io/",
+    "publisher": {"@type":"Organization","name":"Memory Power"},
+    "inLanguage": ["en","ar"]
+  }
+  </script>
 </body>
 </html>
