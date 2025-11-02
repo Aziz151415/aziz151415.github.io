@@ -3,31 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Memory Power — Brain Training Puzzle Game</title>
+  <title>Daily Ball Match — Calm Daily Puzzle</title>
 
   <!-- SEO / Social -->
-  <meta name="description" content="Memory Power is a relaxing brain-training puzzle game with clean design, daily levels, and smooth performance.">
-  <meta property="og:title" content="Memory Power — Brain Training Puzzle Game">
-  <meta property="og:description" content="Sharpen your memory with beautiful, calm gameplay and daily challenges.">
+  <meta name="description" content="Daily Ball Match is a calm daily puzzle with clean design, satisfying animations, and smooth performance.">
+  <meta property="og:title" content="Daily Ball Match — Calm Daily Puzzle">
+  <meta property="og:description" content="Relax and play a beautiful daily matching puzzle. Smooth, lightweight, and privacy-friendly.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aziz151415.github.io/">
-  <meta property="og:image" content="https://aziz151415.github.io/icon-1200.png">
+  <meta property="og:image" content="https://aziz151415.github.io/daily-ball-match/icon-1200.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
     :root{
-      --bg: #0e1f1b;
-      --card:#0f2f25;
-      --brand:#15b59e;
-      --brand2:#1dd3b0;
-      --text:#e7f6f2;
-      --muted:#a9c7bf;
+      --bg:#0e1f1b; --card:#0f2f25; --brand:#15b59e; --brand2:#1dd3b0;
+      --text:#e7f6f2; --muted:#a9c7bf;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:
-      radial-gradient(1200px 600px at 20% -10%, #14463c 0%, #0e1f1b 40%, #0a1613 100%);
+    html,body{
+      margin:0;padding:0;color:var(--text);
+      background: radial-gradient(1200px 600px at 20% -10%, #14463c 0%, #0e1f1b 40%, #0a1613 100%);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
     }
     a{color:var(--brand2);text-decoration:none}
     a:hover{text-decoration:underline}
@@ -36,7 +32,7 @@
     .brand{display:flex;align-items:center;gap:12px}
     .logo{
       width:44px;height:44px;border-radius:12px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
       display:grid;place-items:center;font-weight:800;color:#06352d;
       box-shadow:0 10px 30px rgba(21,181,158,.35);
     }
@@ -91,13 +87,12 @@
     .links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
     .links a{border:1px solid #2a4f47;border-radius:10px;padding:8px 12px;background:#0d1d19}
 
-    @media (max-width: 900px){
+    @media (max-width:900px){
       .hero{grid-template-columns:1fr}
       .features{grid-template-columns:1fr}
       .row{grid-template-columns:1fr}
       .shots{grid-template-columns:1fr 1fr}
     }
-    /* RTL support toggle */
     [dir="rtl"] .hero{direction:rtl}
     [dir="rtl"] .features,[dir="rtl"] .row,[dir="rtl"] .shots{direction:rtl}
   </style>
@@ -106,8 +101,8 @@
   <div class="wrap" id="root" data-lang="en" dir="ltr">
     <header>
       <div class="brand">
-        <div class="logo">MP</div>
-        <strong>Memory Power</strong>
+        <div class="logo">DB</div>
+        <strong>Daily Ball Match</strong>
       </div>
       <div class="lang">
         <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
@@ -118,23 +113,17 @@
     <!-- HERO -->
     <section class="hero">
       <div class="card">
-        <h1 data-en="Train Your Brain, Daily."
-            data-ar="درّب ذاكرتك… كل يوم.">Train Your Brain, Daily.</h1>
+        <h1 data-en="Relaxing Daily Matching."
+            data-ar="مطابقة يومية… بهدوء.">Relaxing Daily Matching.</h1>
         <p class="subtitle"
-           data-en="A calm, elegant memory game with daily levels and smooth performance."
-           data-ar="لعبة ذاكرة هادئة بأناقة عالية، مستويات يومية، وأداء سلس.">
-          A calm, elegant memory game with daily levels and smooth performance.
+           data-en="A beautiful daily puzzle with smooth animations and clean design."
+           data-ar="لغز يومي جميل مع رسوم سلسة وتصميم نظيف.">
+          A beautiful daily puzzle with smooth animations and clean design.
         </p>
         <div class="badges">
-          <a class="badge" href="APP_STORE_LINK_HERE" target="_blank" rel="noopener">
-             Download on the App Store
-          </a>
-          <a class="badge" href="https://aziz151415.github.io/app-ads.txt" target="_blank" rel="noopener">
-            app-ads.txt
-          </a>
-          <a class="badge" href="https://aziz151415.github.io/Memory-Power-privacy/" target="_blank" rel="noopener">
-            Privacy Policy
-          </a>
+          <a class="badge" href="APP_STORE_LINK_HERE" target="_blank" rel="noopener"> Download on the App Store</a>
+          <a class="badge" href="https://aziz151415.github.io/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
+          <a class="badge" href="https://aziz151415.github.io/daily-ball-match/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
           <a class="badge" href="mailto:Abdulaziz.h1407@gmail.com">Support</a>
         </div>
         <div class="tiny"
@@ -146,11 +135,10 @@
 
       <div class="phone card">
         <div>
-          <div style="font-size:48px;opacity:.9;">🧠</div>
-          <div style="margin-top:8px;color:#b9f3e8">Memory Power</div>
+          <div style="font-size:48px;opacity:.9;">🎾</div>
+          <div style="margin-top:8px;color:#b9f3e8">Daily Ball Match</div>
           <div style="font-size:13px;color:#79cdbf;margin-top:6px"
-               data-en="Preview mockup"
-               data-ar="صورة تمثيلية">Preview mockup</div>
+               data-en="Preview mockup" data-ar="صورة تمثيلية">Preview mockup</div>
         </div>
       </div>
     </section>
@@ -165,10 +153,10 @@
         </p>
       </div>
       <div class="feat">
-        <h3 data-en="Daily Levels" data-ar="مستويات يومية">Daily Levels</h3>
-        <p  data-en="Fresh challenges to keep your brain active every day."
-            data-ar="تحديات متجددة تُنشّط الذاكرة يوميًا.">
-          Fresh challenges to keep your brain active every day.
+        <h3 data-en="Daily Challenges" data-ar="تحديات يومية">Daily Challenges</h3>
+        <p  data-en="Fresh puzzles every day to keep your brain active."
+            data-ar="ألغاز متجددة يوميًا لتنشيط الذاكرة.">
+          Fresh puzzles every day to keep your brain active.
         </p>
       </div>
       <div class="feat">
@@ -180,26 +168,20 @@
       </div>
     </section>
 
-    <!-- SCREENSHOTS -->
+    <!-- SCREENSHOTS / COPY -->
     <section class="row">
       <div class="card">
-        <h3 style="margin:0 0 10px"
-            data-en="In-Game Screenshots"
-            data-ar="صور من داخل اللعبة">In-Game Screenshots</h3>
+        <h3 style="margin:0 0 10px" data-en="In-Game Screenshots" data-ar="صور من داخل اللعبة">In-Game Screenshots</h3>
         <div class="shots">
           <div class="shot">Shot 1</div>
           <div class="shot">Shot 2</div>
           <div class="shot">Shot 3</div>
         </div>
-        <div class="tiny" style="margin-top:10px"
-             data-en="Screenshots are illustrative"
-             data-ar="الصور توضيحية">Screenshots are illustrative</div>
+        <div class="tiny" style="margin-top:10px" data-en="Screenshots are illustrative" data-ar="الصور توضيحية">Screenshots are illustrative</div>
       </div>
 
       <div class="card">
-        <h3 style="margin:0 0 10px"
-            data-en="Made for Focus"
-            data-ar="مصممة للتركيز">Made for Focus</h3>
+        <h3 style="margin:0 0 10px" data-en="Made for Focus" data-ar="مصممة للتركيز">Made for Focus</h3>
         <p class="subtitle" style="margin:6px 0 0"
            data-en="Minimal visuals, gentle feedback, and short sessions that fit your day."
            data-ar="تصميم بسيط، مؤثرات لطيفة، وجلسات قصيرة تناسب يومك.">
@@ -211,20 +193,19 @@
     <!-- LINKS -->
     <section style="margin-top:26px">
       <div class="links">
-        <a href="https://aziz151415.github.io/Memory-Power-privacy/" target="_blank" rel="noopener"
+        <a href="https://aziz151415.github.io/daily-ball-match/privacy.html" target="_blank" rel="noopener"
            data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
-        <a href="mailto:Abdulaziz.h1407@gmail.com"
-           data-en="Contact Support" data-ar="الدعم الفني">Contact Support</a>
+        <a href="mailto:Abdulaziz.h1407@gmail.com" data-en="Contact Support" data-ar="الدعم الفني">Contact Support</a>
         <a href="https://aziz151415.github.io/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span> Memory Power. All rights reserved.
+      © <span id="year"></span> Daily Ball Match. All rights reserved.
     </footer>
   </div>
 
-  <!-- Simple language toggle -->
+  <!-- Language toggle -->
   <script>
     function setLang(lang){
       const root = document.getElementById('root');
@@ -237,22 +218,21 @@
       document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
     }
     document.getElementById('year').textContent = new Date().getFullYear();
-    // initialize EN default
     setLang('en');
   </script>
 
-  <!-- Optional structured data -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "Memory Power",
-    "operatingSystem": "iOS",
-    "applicationCategory": "GameApplication",
-    "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
-    "url": "https://aziz151415.github.io/",
-    "publisher": {"@type":"Organization","name":"Memory Power"},
-    "inLanguage": ["en","ar"]
+    "@context":"https://schema.org",
+    "@type":"MobileApplication",
+    "name":"Daily Ball Match",
+    "operatingSystem":"iOS",
+    "applicationCategory":"GameApplication",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "url":"https://aziz151415.github.io/",
+    "publisher":{"@type":"Organization","name":"Daily Ball Match"},
+    "inLanguage":["en","ar"]
   }
   </script>
 </body>
